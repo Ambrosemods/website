@@ -1,0 +1,61 @@
+baseURL: "https://yourdomain.com/"
+title: "Jonathan Ambrose"
+theme: PaperMod
+languageCode: en-us
+enableRobotsTXT: true
+buildDrafts: false
+
+pagination:
+  pagerSize: 8
+
+minify:
+  disableXML: true
+
+params:
+  env: production
+  title: "Jonathan Ambrose"
+  description: "Travel stories, 3D printing projects, and notes on soft robotics."
+  keywords: [blog, travel, 3D printing, soft robotics, maker]
+  author: "Your Name"
+  defaultTheme: auto
+  ShowReadingTime: true
+  ShowShareButtons: false
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+  ShowRssButtonInSectionTermList: true
+  ShowToc: false
+
+  homeInfoParams:
+    Title: "Hi, I'm [Your Name] 👋"
+    Content: >
+      I travel, I 3D print things, and I build soft robots.
+      PhD in soft robotics, CTO of a healthcare startup.
+      This is where I write about all of it.
+
+  socialIcons:
+    - name: github
+      url: "https://github.com/Ambrosemods/"
+    - name: linkedin
+      url: "https://linkedin.com/in/jwa"
+
+menu:
+  main:
+    - identifier: blog
+      name: Blog
+      url: /posts/
+      weight: 10
+    - identifier: prints
+      name: Prints
+      url: /prints/
+      weight: 20
+    - identifier: about
+      name: About
+      url: /about/
+      weight: 30
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
