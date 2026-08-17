@@ -1,0 +1,14 @@
+{
+  // Cloudflare Workers Assets — deploy Hugo's public/ output
+  // Project name must match your Worker in the Cloudflare dashboard
+  "name": "website",
+  "compatibility_date": "2026-08-17",
+  "build": {
+    "command": "chmod a+x build.sh && ./build.sh"
+  },
+  "assets": {
+    "directory": "./public",
+    "not_found_handling": "404-page",
+    "html_handling": "auto-trailing-slash"
+  }
+}
