@@ -5,8 +5,8 @@ tags: ["meta"]
 summary: "Why this site exists and what to expect here."
 ---
 
-Welcome! I built this site to share two things I love: traveling and making things with my 3D printer.
+I built this site as a quiet place for three things I care about: traveling, making things on a 3D printer, and the soft-robotics / healthcare work that fills most of my days.
 
-Expect trip writeups, print designs you can download, and the occasional detour into soft robotics.
+Expect trip writeups, printable designs you can download, and the occasional note on actuators, haptics, and shipping real products in healthcare.
 
-*(This is a sample post — edit or delete `content/posts/hello-world.md` to replace it.)*
+If you're looking for what I do professionally, that's [Seamless XR](https://seamless.sg). Everything else lives here.

@@ -1,0 +1,9 @@
+.DS_Store
+Thumbs.db
+resources/
+public/
+.hugo_build.lock
+*.swp
+*~
+.idea/
+.vscode/

@@ -1,0 +1,71 @@
+/* Site polish layered on PaperMod — keep overrides light */
+
+:root {
+  --gap: 28px;
+  --main-width: 720px;
+  --radius: 10px;
+}
+
+.profile .profile_inner {
+  gap: 1.15rem;
+  max-width: 36rem;
+  padding: 0 1rem;
+}
+
+.profile h1 {
+  font-size: clamp(1.9rem, 4vw, 2.4rem);
+  letter-spacing: -0.02em;
+  margin: 0.25rem 0 0;
+}
+
+.profile span {
+  line-height: 1.55;
+  color: var(--secondary);
+}
+
+.profile span a {
+  color: var(--primary);
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
+.profile .buttons {
+  margin-top: 0.5rem;
+  max-width: 28rem;
+}
+
+.profile .button {
+  transition: background 0.15s ease, transform 0.15s ease;
+}
+
+.profile .button:hover {
+  background: var(--border);
+  transform: translateY(-1px);
+}
+
+.main .post-entry {
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.main .post-entry:hover {
+  box-shadow: 0 1px 0 var(--border);
+}
+
+.post-content a {
+  text-underline-offset: 0.18em;
+}
+
+.footer {
+  opacity: 0.85;
+}
+
+@media (max-width: 600px) {
+  .profile .buttons {
+    width: 100%;
+  }
+
+  .profile .button {
+    flex: 1 1 calc(50% - 0.5rem);
+    text-align: center;
+  }
+}

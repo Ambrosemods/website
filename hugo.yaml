@@ -14,10 +14,11 @@ minify:
 params:
   env: production
   title: "Jonathan Ambrose"
-  description: "Travel stories, 3D printing projects, and notes on soft robotics."
-  keywords: [blog, travel, 3D printing, soft robotics, maker]
-  author: "Your Name"
+  description: "Soft robotics PhD, CTO of Seamless XR. Travel notes, 3D prints, and building in healthcare."
+  keywords: [blog, travel, 3D printing, soft robotics, maker, healthcare, Seamless XR]
+  author: "Jonathan Ambrose"
   defaultTheme: auto
+  disableThemeToggle: false
   ShowReadingTime: true
   ShowShareButtons: false
   ShowPostNavLinks: true
@@ -25,19 +26,36 @@ params:
   ShowCodeCopyButtons: true
   ShowRssButtonInSectionTermList: true
   ShowToc: false
+  hideFooter: false
+  DateFormat: "January 2, 2006"
 
-  homeInfoParams:
-    Title: "Hi, I'm [Your Name] 👋"
-    Content: >
-      I travel, I 3D print things, and I build soft robots.
-      PhD in soft robotics, CTO of a healthcare startup.
-      This is where I write about all of it.
+  # Full-page personal home (PaperMod profile mode)
+  profileMode:
+    enabled: true
+    title: "Jonathan Ambrose"
+    subtitle: >
+      Soft robotics PhD · CTO & co-founder at [Seamless XR](https://seamless.sg).
+      I write about travel, 3D printing, and building things that help people feel again.
+    imageUrl: "" # drop a square photo at static/images/profile.jpg and set "/images/profile.jpg"
+    imageWidth: 160
+    imageHeight: 160
+    buttons:
+      - name: Blog
+        url: "/posts/"
+      - name: Prints
+        url: "/prints/"
+      - name: About
+        url: "/about/"
+      - name: Seamless XR
+        url: "https://seamless.sg"
 
   socialIcons:
     - name: github
       url: "https://github.com/Ambrosemods/"
     - name: linkedin
       url: "https://linkedin.com/in/jwa"
+    - name: rss
+      url: "/index.xml"
 
 menu:
   main:
