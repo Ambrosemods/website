@@ -1,5 +1,6 @@
 {
-  // Must match the existing Worker: personalwebsite.jwambrose17.workers.dev
+  // Deploy the static site only. Do not manage DNS/custom domains from Wrangler —
+  // jwambrose.com still has Squarespace records, and custom_domain fails with 100117.
   "name": "personalwebsite",
   "compatibility_date": "2026-08-17",
   "workers_dev": true,
@@ -8,11 +9,5 @@
     "directory": "./public",
     "not_found_handling": "404-page",
     "html_handling": "auto-trailing-slash"
-  },
-  // Use zone routes (not custom_domain) until Squarespace A/CNAME records are deleted.
-  // custom_domain fails with error 100117 if the hostname already has DNS records.
-  "routes": [
-    { "pattern": "jwambrose.com/*", "zone_name": "jwambrose.com" },
-    { "pattern": "www.jwambrose.com/*", "zone_name": "jwambrose.com" }
-  ]
+  }
 }
