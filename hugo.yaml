@@ -54,6 +54,10 @@ menu:
       name: About
       url: /about/
       weight: 10
+    - identifier: research
+      name: Research
+      url: /research/
+      weight: 15
     - identifier: writing
       name: Writing
       url: /posts/
