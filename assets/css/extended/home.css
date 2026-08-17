@@ -1,0 +1,212 @@
+/* Custom homepage — personal brand, PaperMod elsewhere */
+
+:root {
+  --accent: #9a4a32;
+  --accent-soft: rgba(154, 74, 50, 0.12);
+  --home-serif: "Fraunces", "Iowan Old Style", "Palatino Linotype", Palatino, serif;
+}
+
+:root[data-theme="dark"] {
+  --accent: #e08a6a;
+  --accent-soft: rgba(224, 138, 106, 0.16);
+}
+
+body:has(.home) .main {
+  max-width: calc(880px + var(--gap) * 2);
+}
+
+.home {
+  display: flex;
+  flex-direction: column;
+  gap: 3.25rem;
+  padding-bottom: 2rem;
+}
+
+.home-hero {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 2rem 2.25rem;
+  align-items: start;
+  padding: 1.5rem 0 0.5rem;
+}
+
+.home-portrait img,
+.home-mono {
+  width: 132px;
+  height: 132px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.home-mono {
+  display: grid;
+  place-items: center;
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-family: var(--home-serif);
+  font-size: 2.4rem;
+  font-weight: 500;
+  letter-spacing: -0.03em;
+}
+
+.home-kicker {
+  margin: 0 0 0.4rem;
+  font-size: 0.78rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--secondary);
+}
+
+.home-intro h1 {
+  margin: 0 0 0.85rem;
+  font-family: var(--home-serif);
+  font-size: clamp(2.2rem, 5vw, 3.15rem);
+  font-weight: 500;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+}
+
+.home-lede {
+  margin: 0;
+  max-width: 38rem;
+  font-size: 1.12rem;
+  line-height: 1.55;
+  color: var(--content);
+}
+
+.home-lede a {
+  color: var(--accent);
+  text-underline-offset: 0.16em;
+}
+
+.home-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin: 1.35rem 0 0;
+}
+
+.home-btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.42rem 0.9rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  font-size: 0.92rem;
+  color: var(--primary);
+  background: transparent;
+}
+
+.home-btn:hover {
+  border-color: var(--secondary);
+}
+
+.home-btn-primary {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: var(--theme);
+}
+
+.home-btn-primary:hover {
+  opacity: 0.9;
+}
+
+.home-section h2 {
+  margin: 0 0 1.1rem;
+  font-size: 0.78rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--secondary);
+  font-weight: 600;
+}
+
+.home-work {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0;
+  border-top: 1px solid var(--border);
+}
+
+.home-work li {
+  padding: 1.15rem 0 1.25rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.home-work-meta {
+  margin: 0 0 0.25rem;
+  font-size: 0.78rem;
+  color: var(--accent);
+  letter-spacing: 0.04em;
+}
+
+.home-work h3 {
+  margin: 0 0 0.4rem;
+  font-family: var(--home-serif);
+  font-size: 1.35rem;
+  font-weight: 500;
+}
+
+.home-work h3 a {
+  color: var(--primary);
+}
+
+.home-work p {
+  margin: 0;
+  max-width: 40rem;
+  color: var(--content);
+  line-height: 1.5;
+}
+
+.home-posts {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.home-posts li a {
+  display: grid;
+  grid-template-columns: 5.5rem 1fr;
+  gap: 1rem;
+  padding: 0.7rem 0;
+  border-bottom: 1px solid var(--border);
+  color: var(--primary);
+}
+
+.home-posts li:first-child a {
+  border-top: 1px solid var(--border);
+}
+
+.home-posts time {
+  color: var(--secondary);
+  font-size: 0.9rem;
+}
+
+.home-more {
+  margin: 0.9rem 0 0;
+}
+
+.home-more a,
+.home-contact a {
+  color: var(--accent);
+  text-underline-offset: 0.16em;
+}
+
+.home-contact p {
+  margin: 0;
+  max-width: 36rem;
+  line-height: 1.55;
+}
+
+@media (max-width: 700px) {
+  .home-hero {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .home-posts li a {
+    grid-template-columns: 1fr;
+    gap: 0.15rem;
+  }
+}

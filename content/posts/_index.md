@@ -1,4 +1,4 @@
 ---
-title: "Blog"
-description: "Travel writeups, maker notes, and building in soft robotics and healthcare."
+title: "Writing"
+description: "Notes on building in healthcare, and the occasional trip or print."
 ---

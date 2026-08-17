@@ -14,9 +14,11 @@ minify:
 params:
   env: production
   title: "Jonathan Ambrose"
-  description: "Soft robotics PhD, CTO of Seamless XR. Travel notes, 3D prints, and building in healthcare."
-  keywords: [blog, travel, 3D printing, soft robotics, maker, healthcare, Seamless XR]
+  description: "Soft robotics PhD. CTO and co-founder of Seamless XR. Notes on building sensory diagnostics, haptics, and hardware."
+  keywords: [soft robotics, haptics, healthcare, Seamless XR, 3D printing, travel]
   author: "Jonathan Ambrose"
+  # Set this to show a mailto on the homepage and About page, e.g. you@jwambrose.com
+  email: ""
   defaultTheme: auto
   disableThemeToggle: false
   ShowReadingTime: true
@@ -29,25 +31,14 @@ params:
   hideFooter: false
   DateFormat: "January 2, 2006"
 
-  # Full-page personal home (PaperMod profile mode)
+  homepage:
+    kicker: "CTO · Soft robotics"
+    lede: >
+      CTO and co-founder of [Seamless XR](https://seamless.sg).
+      I build haptic and sensory systems so clinicians can measure what patients can feel — and so people can get that feeling back.
+
   profileMode:
-    enabled: true
-    title: "Jonathan Ambrose"
-    subtitle: >
-      Soft robotics PhD · CTO & co-founder at [Seamless XR](https://seamless.sg).
-      I write about travel, 3D printing, and building things that help people feel again.
-    imageUrl: "" # drop a square photo at static/images/profile.jpg and set "/images/profile.jpg"
-    imageWidth: 160
-    imageHeight: 160
-    buttons:
-      - name: Blog
-        url: "/posts/"
-      - name: Prints
-        url: "/prints/"
-      - name: About
-        url: "/about/"
-      - name: Seamless XR
-        url: "https://seamless.sg"
+    enabled: false
 
   socialIcons:
     - name: github
@@ -59,17 +50,17 @@ params:
 
 menu:
   main:
-    - identifier: blog
-      name: Blog
-      url: /posts/
-      weight: 10
-    - identifier: prints
-      name: Prints
-      url: /prints/
-      weight: 20
     - identifier: about
       name: About
       url: /about/
+      weight: 10
+    - identifier: writing
+      name: Writing
+      url: /posts/
+      weight: 20
+    - identifier: prints
+      name: Prints
+      url: /prints/
       weight: 30
 
 outputs:

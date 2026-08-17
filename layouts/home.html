@@ -1,0 +1,86 @@
+{{ define "main" }}
+<article class="home">
+  <header class="home-hero">
+    <div class="home-portrait">
+      {{- if fileExists "static/images/profile.jpg" }}
+      <img src="{{ "images/profile.jpg" | relURL }}" alt="{{ site.Params.author }}" width="160" height="160">
+      {{- else }}
+      <div class="home-mono" aria-hidden="true">JA</div>
+      {{- end }}
+    </div>
+    <div class="home-intro">
+      <p class="home-kicker">{{ site.Params.homepage.kicker | default "Soft robotics · Healthcare" }}</p>
+      <h1>{{ site.Title }}</h1>
+      <p class="home-lede">
+        {{- with site.Params.homepage.lede }}
+        {{ . | markdownify }}
+        {{- else }}
+        CTO and co-founder of <a href="https://seamless.sg">Seamless XR</a>.
+        I build haptic and sensory systems so clinicians can measure what patients can feel — and so people can get that feeling back.
+        {{- end }}
+      </p>
+      <p class="home-links">
+        <a class="home-btn home-btn-primary" href="#work">Selected work</a>
+        <a class="home-btn" href="{{ "/about/" | relURL }}">About</a>
+        {{- with site.Params.email }}
+        <a class="home-btn" href="mailto:{{ . }}">Email</a>
+        {{- else }}
+        <a class="home-btn" href="https://linkedin.com/in/jwa">LinkedIn</a>
+        {{- end }}
+      </p>
+    </div>
+  </header>
+
+  <section class="home-section" id="work">
+    <h2>Selected work</h2>
+    <ul class="home-work">
+      <li>
+        <p class="home-work-meta">Company</p>
+        <h3><a href="https://seamless.sg">Seamless XR</a></h3>
+        <p>Co-founder and CTO. Artemis is an AI-guided sensory diagnostics platform for point-of-care assessment — objective testing, less paperwork, better follow-up after stroke, neuropathy, and nerve injury.</p>
+      </li>
+      <li>
+        <p class="home-work-meta">Research</p>
+        <h3>Soft actuators and haptics</h3>
+        <p>PhD in soft robotics at NUS. Papers in <em>Soft Robotics</em> and <em>Advanced Intelligent Systems</em> on multilayer extendable actuators, plus patents on the same family of hardware.</p>
+      </li>
+      <li>
+        <p class="home-work-meta">Making</p>
+        <h3><a href="{{ "/prints/" | relURL }}">Prints and travel gear</a></h3>
+        <p>Hardware I design on a printer and take on the road. Secondary to the work above — still the way I think with my hands.</p>
+      </li>
+    </ul>
+  </section>
+
+  {{- $posts := where site.RegularPages "Section" "posts" }}
+  {{- if $posts }}
+  <section class="home-section" id="writing">
+    <h2>Writing</h2>
+    <ul class="home-posts">
+      {{- range first 4 $posts }}
+      <li>
+        <a href="{{ .RelPermalink }}">
+          <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2006" }}</time>
+          <span>{{ .Title }}</span>
+        </a>
+      </li>
+      {{- end }}
+    </ul>
+    <p class="home-more"><a href="{{ "/posts/" | relURL }}">All posts</a></p>
+  </section>
+  {{- end }}
+
+  <section class="home-section home-contact" id="contact">
+    <h2>Contact</h2>
+    <p>
+      For work, press, or collaboration —
+      {{- with site.Params.email }}
+      <a href="mailto:{{ . }}">{{ . }}</a>
+      or
+      {{- end }}
+      <a href="https://linkedin.com/in/jwa">LinkedIn</a>.
+      Company site: <a href="https://seamless.sg">seamless.sg</a>.
+    </p>
+  </section>
+</article>
+{{ end }}
