@@ -2,16 +2,17 @@
   // Must match the existing Worker: personalwebsite.jwambrose17.workers.dev
   "name": "personalwebsite",
   "compatibility_date": "2026-08-17",
-  "build": {
-    "command": "chmod a+x build.sh && ./build.sh"
-  },
+  "workers_dev": true,
+  "preview_urls": true,
   "assets": {
     "directory": "./public",
     "not_found_handling": "404-page",
     "html_handling": "auto-trailing-slash"
   },
+  // Use zone routes (not custom_domain) until Squarespace A/CNAME records are deleted.
+  // custom_domain fails with error 100117 if the hostname already has DNS records.
   "routes": [
-    { "pattern": "jwambrose.com", "custom_domain": true },
-    { "pattern": "www.jwambrose.com", "custom_domain": true }
+    { "pattern": "jwambrose.com/*", "zone_name": "jwambrose.com" },
+    { "pattern": "www.jwambrose.com/*", "zone_name": "jwambrose.com" }
   ]
 }
