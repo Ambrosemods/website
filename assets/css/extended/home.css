@@ -24,29 +24,23 @@ body:has(.home) .main {
 
 .home-hero {
   display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 2rem 2.25rem;
-  align-items: start;
-  padding: 1.5rem 0 0.5rem;
+  gap: 1.75rem;
+  padding: 0.35rem 0 0.5rem;
 }
 
-.home-portrait img,
-.home-mono {
-  width: 132px;
-  height: 132px;
-  border-radius: 50%;
+.home-cover {
+  margin: 0;
+}
+
+.home-cover img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 28rem;
   object-fit: cover;
-}
-
-.home-mono {
-  display: grid;
-  place-items: center;
-  background: var(--accent-soft);
-  color: var(--accent);
-  font-family: var(--home-serif);
-  font-size: 2.4rem;
-  font-weight: 500;
-  letter-spacing: -0.03em;
+  object-position: 68% 42%;
+  aspect-ratio: 5 / 4;
+  border-radius: 16px;
 }
 
 .home-kicker {
@@ -200,9 +194,11 @@ body:has(.home) .main {
 }
 
 @media (max-width: 700px) {
-  .home-hero {
-    grid-template-columns: 1fr;
-    gap: 1.25rem;
+  .home-cover img {
+    max-height: 22rem;
+    aspect-ratio: 1 / 1;
+    object-position: 72% 38%;
+    border-radius: 12px;
   }
 
   .home-posts li a {

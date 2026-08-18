@@ -31,6 +31,9 @@ params:
   hideFooter: false
   DateFormat: "January 2, 2006"
 
+  images:
+    - /images/cover.jpg
+
   homepage:
     kicker: "CTO · Soft robotics"
     lede: >

@@ -1,13 +1,11 @@
 {{ define "main" }}
 <article class="home">
   <header class="home-hero">
-    <div class="home-portrait">
-      {{- if fileExists "static/images/profile.jpg" }}
-      <img src="{{ "images/profile.jpg" | relURL }}" alt="{{ site.Params.author }}" width="160" height="160">
-      {{- else }}
-      <div class="home-mono" aria-hidden="true">JA</div>
-      {{- end }}
-    </div>
+    {{- if fileExists "static/images/cover.jpg" }}
+    <figure class="home-cover">
+      <img src="{{ "images/cover.jpg" | relURL }}" alt="{{ site.Params.author }} at a lakeside overlook" width="1003" height="1024">
+    </figure>
+    {{- end }}
     <div class="home-intro">
       <p class="home-kicker">{{ site.Params.homepage.kicker | default "Soft robotics · Healthcare" }}</p>
       <h1>{{ site.Title }}</h1>
