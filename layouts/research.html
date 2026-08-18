@@ -1,0 +1,76 @@
+{{ define "main" }}
+{{- $r := site.Data.research }}
+<article class="research">
+  <header class="research-hero">
+    <p class="home-kicker">Publications · Patents</p>
+    <h1>Research</h1>
+    <p class="home-lede">{{ $r.intro | markdownify }}</p>
+    <p class="home-links">
+      {{- range $r.profiles }}
+      <a class="home-btn" href="{{ .url }}" rel="noopener">{{ .name }}</a>
+      {{- end }}
+      <a class="home-btn" href="https://patents.google.com/?inventor=Jonathan+William+AMBROSE" rel="noopener">Google Patents</a>
+      <a class="home-btn" href="https://seamless.sg" rel="noopener">Seamless XR</a>
+    </p>
+    {{- with $r.themes }}
+    <ul class="research-themes">
+      {{- range . }}
+      <li>{{ . }}</li>
+      {{- end }}
+    </ul>
+    {{- end }}
+  </header>
+
+  {{- $first := sort (where $r.papers "role" "first") "year" "desc" }}
+  {{- $co := sort (where $r.papers "role" "co") "year" "desc" }}
+  {{- $conf := sort (where $r.papers "role" "conference") "year" "desc" }}
+
+  <section class="research-section" id="publications">
+    <h2>Selected publications</h2>
+
+    <h3>First author</h3>
+    <ol class="research-list">
+      {{- range $first }}
+      {{ partial "paper.html" . }}
+      {{- end }}
+    </ol>
+
+    <h3>Co-authored</h3>
+    <ol class="research-list">
+      {{- range $co }}
+      {{ partial "paper.html" . }}
+      {{- end }}
+    </ol>
+
+    {{- with $conf }}
+    <h3>Conferences</h3>
+    <ol class="research-list">
+      {{- range . }}
+      {{ partial "paper.html" . }}
+      {{- end }}
+    </ol>
+    {{- end }}
+  </section>
+
+  {{- with $r.patents }}
+  <section class="research-section" id="patents">
+    <h2>Patents</h2>
+    <ol class="research-list">
+      {{- range (sort . "year" "desc") }}
+      <li class="research-paper">
+        <span class="research-year">{{ .year }}</span>
+        <div class="research-body">
+          <a class="research-title" href="{{ .url }}" rel="noopener">{{ .title }}</a>
+          <p class="research-authors">{{ .assignee }}</p>
+          <p class="research-meta">
+            <em>{{ .number }}</em>
+            · <a href="{{ .url }}" rel="noopener">Google Patents</a>
+          </p>
+        </div>
+      </li>
+      {{- end }}
+    </ol>
+  </section>
+  {{- end }}
+</article>
+{{ end }}

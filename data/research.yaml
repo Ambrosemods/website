@@ -1,0 +1,130 @@
+intro: >
+  Soft robotics PhD at NUS, in Raye Yeow's Evolution Innovation Lab.
+  I designed multilayer pneumatic actuators — compact artificial muscles
+  that extend, contract, and stack — for wearable haptics and robots
+  you can reconfigure. That hardware became a family of patents, then
+  [Seamless XR](https://seamless.sg).
+
+profiles:
+  - name: ResearchGate
+    url: https://www.researchgate.net/profile/Jonathan_Ambrose5
+  - name: Google Scholar
+    url: https://scholar.google.com/citations?user=zNqUuZ8AAAAJ
+
+themes:
+  - Soft pneumatic actuators
+  - Multilayer extension (MEA / DMEA)
+  - Wearable rehabilitation
+  - Haptic interfaces
+  - Modular robots
+
+papers:
+  - title: Compact Multilayer Extension Actuators for Reconfigurable Soft Robots
+    authors: Jonathan W. Ambrose, Nicholas Z. R. Chiang, Dylan S. Y. Cheah, Chen-Hua Yeow
+    venue: Soft Robotics
+    year: 2022
+    role: first
+    doi: 10.1089/soro.2022.0042
+    note: Thin, high-force pneumatic layers that stack in series or parallel.
+
+  - title: Sarcomere-Inspired Multilayer Artificial Muscle Units for Hyperconfigurable Robotic Applications
+    authors: Jonathan W. Ambrose, Gavril Y. E. Tan, Nicholas Z. R. Chiang, Dylan S. Y. Cheah, Quan Xiong, Chen-Hua Yeow
+    venue: Advanced Intelligent Systems
+    year: 2023
+    role: first
+    doi: 10.1002/aisy.202300410
+    note: Compact muscle units that both extend and contract, built for reconfigurable robots.
+
+  - title: Dual Multilayer Extension Actuator for High Extension and High Compression Force Applications
+    authors: Jonathan W. Ambrose, Dylan S. Y. Cheah, Chen-Hua Yeow
+    venue: IEEE RoboSoft
+    year: 2023
+    role: conference
+    doi: 10.1109/robosoft55895.2023.10122079
+    url: https://ieeexplore.ieee.org/document/10122079/
+    note: Push–pull actuation in an 8 g package, with vacuum-assisted compression.
+
+  - title: Multilayer Extending Actuator for Soft Robotic Applications
+    authors: Jonathan W. Ambrose, Chen-Hua Yeow
+    venue: IEEE RoboSoft
+    year: 2021
+    role: conference
+    doi: 10.1109/robosoft51838.2021.9479202
+    url: https://ieeexplore.ieee.org/document/9479202/
+    note: First MEA paper — high extension and tip force from a thin elastomer stack.
+
+  - title: A Wearable Soft Robotic Exoskeleton for Hip Flexion Rehabilitation
+    authors: Tiana Miller-Jackson, Rainier F. Natividad, Daniel Y. L. Lim, Luis Hernández-Barraza, Jonathan W. Ambrose, Chen-Hua Yeow
+    venue: Frontiers in Robotics and AI
+    year: 2022
+    role: co
+    doi: 10.3389/frobt.2022.835237
+
+  - title: Electrohydraulic Folding Ring Actuators for Radially Contracting Applications
+    authors: Gavril Y. E. Tan, Quan Xiong, Jonathan W. Ambrose, Zeynep Altundal, Raye Chen-Hua Yeow
+    venue: Advanced Science
+    year: 2026
+    role: co
+    doi: 10.1002/advs.75613
+
+  - title: Single-Motor Ultraflexible Robotic (SMUFR) Humanoid Hand
+    authors: Quan Xiong, Dannuo Li, Xuanyi Zhou, Wenci Xin, Chao Wang, Jonathan W. Ambrose, Chen-Hua Yeow
+    venue: IEEE Transactions on Medical Robotics and Bionics
+    year: 2024
+    role: co
+    doi: 10.1109/tmrb.2024.3464107
+    url: https://ieeexplore.ieee.org/document/10684289/
+
+  - title: An Amphibious Fully-Soft Centimeter-Scale Miniature Crawling Robot Powered by Electrohydraulic Fluid Kinetic Energy
+    authors: Quan Xiong, Xuanyi Zhou, Dannuo Li, Jonathan W. Ambrose, Chen-Hua Yeow
+    venue: Advanced Science
+    year: 2024
+    role: co
+    doi: 10.1002/advs.202308033
+
+  - title: Earthworm-Inspired Multi-Material, Adaptive Strain-Limiting, Hybrid Actuators for Soft Robots
+    authors: Quan Xiong, Benjamin W. K. Ang, Tao Jin, Jonathan W. Ambrose, Chen-Hua Yeow
+    venue: Advanced Intelligent Systems
+    year: 2023
+    role: co
+    doi: 10.1002/aisy.202200346
+
+  - title: Composite Soft Pneumatic Actuators Using 3D Printed Skins
+    authors: Ajinkya Bhat, Jonathan W. Ambrose, Chen-Hua Yeow
+    venue: IEEE Robotics and Automation Letters
+    year: 2023
+    role: co
+    doi: 10.1109/lra.2023.3246841
+    url: https://ieeexplore.ieee.org/document/10049113/
+
+  - title: Ultralow-Latency Textile Sensors for Wearable Interfaces with a Human-in-Loop Sensing Approach
+    authors: Ajinkya Bhat, Jonathan W. Ambrose, Chen-Hua Yeow
+    venue: Soft Robotics
+    year: 2022
+    role: co
+    doi: 10.1089/soro.2022.0026
+
+patents:
+  - title: Multilayer extendable actuator
+    number: US20250073895A1
+    url: https://patents.google.com/patent/US20250073895A1
+    year: 2025
+    assignee: National University of Singapore
+
+  - title: Force feedback actuator apparatus and method of operation
+    number: WO2024085814A1
+    url: https://patents.google.com/patent/WO2024085814A1
+    year: 2024
+    assignee: National University of Singapore
+
+  - title: A composite actuator
+    number: WO2023239304A1
+    url: https://patents.google.com/patent/WO2023239304A1
+    year: 2023
+    assignee: National University of Singapore
+
+  - title: Seamless chamber actuator
+    number: WO2023239305A1
+    url: https://patents.google.com/patent/WO2023239305A1
+    year: 2023
+    assignee: National University of Singapore

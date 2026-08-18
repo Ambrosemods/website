@@ -1,0 +1,24 @@
+{{- $href := "" }}
+{{- with .url }}{{ $href = . }}{{ else }}
+  {{- with .doi }}{{ $href = printf "https://doi.org/%s" . }}{{ end }}
+{{- end }}
+<li class="research-paper">
+  <span class="research-year">{{ .year }}</span>
+  <div class="research-body">
+    {{- if $href }}
+    <a class="research-title" href="{{ $href }}" rel="noopener">{{ .title }}</a>
+    {{- else }}
+    <span class="research-title">{{ .title }}</span>
+    {{- end }}
+    <p class="research-authors">{{ .authors }}</p>
+    <p class="research-meta">
+      <em>{{ .venue }}</em>
+      {{- if $href }}
+      · <a href="{{ $href }}" rel="noopener">{{ with .url }}IEEE Xplore{{ else }}doi{{ end }}</a>
+      {{- end }}
+    </p>
+    {{- with .note }}
+    <p class="research-note">{{ . }}</p>
+    {{- end }}
+  </div>
+</li>
