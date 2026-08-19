@@ -17,8 +17,7 @@ params:
   description: "Soft robotics PhD. CTO and co-founder of Seamless XR. Notes on building sensory diagnostics, haptics, and hardware."
   keywords: [soft robotics, haptics, healthcare, Seamless XR, 3D printing, travel]
   author: "Jonathan Ambrose"
-  # Set this to show a mailto on the homepage and About page, e.g. you@jwambrose.com
-  email: ""
+  email: "ambrose.mods@gmail.com"
   defaultTheme: auto
   disableThemeToggle: false
   ShowReadingTime: true
@@ -33,6 +32,11 @@ params:
 
   images:
     - /images/cover.jpg
+
+  assets:
+    favicon: "favicon.svg"
+    favicon16x16: "favicon.svg"
+    favicon32x32: "favicon.svg"
 
   homepage:
     kicker: "CTO · Soft robotics"
@@ -61,14 +65,14 @@ menu:
       name: Research
       url: /research/
       weight: 15
-    - identifier: writing
-      name: Writing
-      url: /posts/
+    - identifier: blog
+      name: Blog
+      url: /blog/
       weight: 20
-    - identifier: prints
-      name: Prints
-      url: /prints/
-      weight: 30
+    - identifier: contact
+      name: Contact
+      url: /contact/
+      weight: 40
 
 outputs:
   home:

@@ -20,11 +20,7 @@
       <p class="home-links">
         <a class="home-btn home-btn-primary" href="#work">Selected work</a>
         <a class="home-btn" href="{{ "/about/" | relURL }}">About</a>
-        {{- with site.Params.email }}
-        <a class="home-btn" href="mailto:{{ . }}">Email</a>
-        {{- else }}
-        <a class="home-btn" href="https://linkedin.com/in/jwa">LinkedIn</a>
-        {{- end }}
+        <a class="home-btn" href="{{ "/contact/" | relURL }}">Contact</a>
       </p>
     </div>
   </header>
@@ -42,18 +38,13 @@
         <h3><a href="{{ "/research/" | relURL }}">Soft actuators and haptics</a></h3>
         <p>PhD at NUS on multilayer pneumatic actuators and wearable systems. First-author papers in <em>Soft Robotics</em> and <em>Advanced Intelligent Systems</em>, plus patents on the same hardware family.</p>
       </li>
-      <li>
-        <p class="home-work-meta">Making</p>
-        <h3><a href="{{ "/prints/" | relURL }}">Prints and travel gear</a></h3>
-        <p>Hardware I design on a printer and take on the road. Secondary to the work above — still the way I think with my hands.</p>
-      </li>
     </ul>
   </section>
 
-  {{- $posts := where site.RegularPages "Section" "posts" }}
+  {{- $posts := where site.RegularPages "Section" "blog" }}
   {{- if $posts }}
-  <section class="home-section" id="writing">
-    <h2>Writing</h2>
+  <section class="home-section" id="blog">
+    <h2>Blog</h2>
     <ul class="home-posts">
       {{- range first 4 $posts }}
       <li>
@@ -64,19 +55,15 @@
       </li>
       {{- end }}
     </ul>
-    <p class="home-more"><a href="{{ "/posts/" | relURL }}">All posts</a></p>
+    <p class="home-more"><a href="{{ "/blog/" | relURL }}">All posts</a></p>
   </section>
   {{- end }}
 
   <section class="home-section home-contact" id="contact">
     <h2>Contact</h2>
     <p>
-      For work, press, or collaboration —
-      {{- with site.Params.email }}
-      <a href="mailto:{{ . }}">{{ . }}</a>
-      or
-      {{- end }}
-      <a href="https://linkedin.com/in/jwa">LinkedIn</a>.
+      For work, press, or collaboration, use the
+      <a href="{{ "/contact/" | relURL }}">contact form</a>.
       Company site: <a href="https://seamless.sg">seamless.sg</a>.
     </p>
   </section>
