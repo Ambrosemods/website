@@ -4,6 +4,7 @@
   --gap: 28px;
   --main-width: 720px;
   --radius: 10px;
+  --header-height: 76px;
 }
 
 .profile .profile_inner {
@@ -53,6 +54,20 @@
 
 .post-content a {
   text-underline-offset: 0.18em;
+}
+
+.logo a {
+  font-size: 1.15rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.logo a img {
+  height: 40px;
+  width: 40px;
+  object-fit: contain;
+  background: #000;
+  border-radius: 8px;
 }
 
 .footer {

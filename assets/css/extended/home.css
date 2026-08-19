@@ -36,10 +36,9 @@ body:has(.home) .main {
   display: block;
   width: 100%;
   height: auto;
-  max-height: 28rem;
+  aspect-ratio: 16 / 9;
   object-fit: cover;
-  object-position: 68% 42%;
-  aspect-ratio: 5 / 4;
+  object-position: 72% 38%;
   border-radius: 16px;
 }
 
@@ -195,9 +194,6 @@ body:has(.home) .main {
 
 @media (max-width: 700px) {
   .home-cover img {
-    max-height: 22rem;
-    aspect-ratio: 1 / 1;
-    object-position: 72% 38%;
     border-radius: 12px;
   }
 
