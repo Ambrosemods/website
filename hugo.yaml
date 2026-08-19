@@ -14,8 +14,8 @@ minify:
 params:
   env: production
   title: "Jonathan Ambrose"
-  description: "Soft robotics PhD. CTO and co-founder of Seamless XR. Notes on building sensory diagnostics, haptics, and hardware."
-  keywords: [soft robotics, haptics, healthcare, Seamless XR, 3D printing, travel]
+  description: "Jonathan Ambrose — medtech founder, soft robotics PhD, and CTO of Seamless XR. Building AI-guided sensory diagnostics for clinicians."
+  keywords: [Jonathan Ambrose, Seamless XR, medtech founder, soft robotics, haptics, healthcare, sensory diagnostics, CTO]
   author: "Jonathan Ambrose"
   email: "ambrose.mods@gmail.com"
   defaultTheme: auto
@@ -46,7 +46,7 @@ params:
     text: "Jonathan Ambrose"
 
   homepage:
-    kicker: "CTO · Soft robotics"
+    kicker: "Medtech founder · CTO · Soft robotics PhD"
     lede: >
       CTO and co-founder of [Seamless XR](https://seamless.sg).
       I build haptic and sensory systems so clinicians can measure what patients can feel — and so people can get that feeling back.

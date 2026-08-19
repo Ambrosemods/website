@@ -1,11 +1,12 @@
 ---
-title: "About"
+title: "About — Jonathan Ambrose"
 url: "/about/"
+description: "Jonathan Ambrose is a medtech founder, soft robotics PhD, and CTO of Seamless XR — an AI-guided sensory diagnostics company for clinicians."
 ShowReadingTime: false
 hideSummary: true
 ---
 
-I'm Jonathan Ambrose — a soft robotics PhD and the CTO & co-founder of [Seamless XR](https://seamless.sg). We build AI-guided sensory diagnostics so clinicians can measure what patients can feel, and so people can get that feeling back.
+I'm Jonathan Ambrose — a medtech founder, soft robotics PhD, and the CTO & co-founder of [Seamless XR](https://seamless.sg). We build AI-guided sensory diagnostics so clinicians can measure what patients can feel, and so people can get that feeling back.
 
 ## Path
 
