@@ -7,41 +7,8 @@
   --header-height: 76px;
 }
 
-.profile .profile_inner {
-  gap: 1.15rem;
-  max-width: 36rem;
-  padding: 0 1rem;
-}
-
-.profile h1 {
-  font-size: clamp(1.9rem, 4vw, 2.4rem);
-  letter-spacing: -0.02em;
-  margin: 0.25rem 0 0;
-}
-
-.profile span {
-  line-height: 1.55;
-  color: var(--secondary);
-}
-
-.profile span a {
-  color: var(--primary);
-  text-decoration: underline;
-  text-underline-offset: 0.15em;
-}
-
-.profile .buttons {
-  margin-top: 0.5rem;
-  max-width: 28rem;
-}
-
-.profile .button {
-  transition: background 0.15s ease, transform 0.15s ease;
-}
-
-.profile .button:hover {
-  background: var(--border);
-  transform: translateY(-1px);
+::selection {
+  background: var(--accent-soft);
 }
 
 .main .post-entry {
@@ -56,31 +23,47 @@
   text-underline-offset: 0.18em;
 }
 
+/* Serif headings on stock PaperMod pages, to match the custom ones */
+.page-header h1,
+.post-title,
+.entry-header h2,
+.post-content h2,
+.post-content h3 {
+  font-family: var(--home-serif);
+  font-weight: 500;
+  letter-spacing: -0.02em;
+}
+
+/* Header lockup: the inline JA mark (hugo.yaml label.iconSVG) plus the name in the heading serif */
 .logo a {
-  font-size: 1.15rem;
-  font-weight: 700;
+  font-family: var(--home-serif);
+  font-size: 1.25rem;
+  font-weight: 500;
+  letter-spacing: -0.01em;
   line-height: 1;
 }
 
-.logo a img {
-  height: 40px;
-  width: 40px;
-  object-fit: contain;
-  background: #000;
-  border-radius: 8px;
+.logo a .logo-mark {
+  height: 30px;
+  width: auto;
+  border-radius: 0;
+}
+
+.logo-j {
+  fill: var(--primary);
+}
+
+.logo-a {
+  fill: var(--accent);
 }
 
 .footer {
   opacity: 0.85;
 }
 
-@media (max-width: 600px) {
-  .profile .buttons {
-    width: 100%;
-  }
-
-  .profile .button {
-    flex: 1 1 calc(50% - 0.5rem);
-    text-align: center;
-  }
+.home-btn:focus-visible,
+.contact-send:focus-visible,
+.logo a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
 }

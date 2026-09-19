@@ -17,28 +17,26 @@ body:has(.contact) .main {
 
 .contact-form {
   display: grid;
-  gap: 0.9rem;
+  gap: 1rem;
   margin-top: 1.75rem;
 }
 
 .contact-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 0.9rem;
+  gap: 1rem;
 }
 
 .contact-field {
   display: flex;
   flex-direction: column;
-  gap: 0.35rem;
+  gap: 0.4rem;
 }
 
 .contact-label {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--secondary);
 }
 
 .contact-form input,
@@ -61,6 +59,7 @@ body:has(.contact) .main {
 .contact-form input::placeholder,
 .contact-form textarea::placeholder {
   color: var(--secondary);
+  opacity: 0.7;
 }
 
 .contact-form input:focus,
@@ -71,6 +70,7 @@ body:has(.contact) .main {
 
 .contact-send {
   width: 100%;
+  margin-top: 0.25rem;
   padding: 0.9rem 1rem;
   border: 0;
   border-radius: 10px;
@@ -88,6 +88,17 @@ body:has(.contact) .main {
 
 .contact-honey {
   display: none !important;
+}
+
+.contact-alt {
+  margin: 1.25rem 0 0;
+  font-size: 0.95rem;
+  color: var(--secondary);
+}
+
+.contact-alt a {
+  color: var(--accent);
+  text-underline-offset: 0.16em;
 }
 
 @media (max-width: 600px) {

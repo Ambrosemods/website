@@ -1,6 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="JA">
-  <rect width="32" height="32" fill="#000"/>
-  <!-- J sits behind the A -->
-  <path fill="#4d6e8c" d="M7.2 5.4h12.2v3.1h-5.5v11.6c0 2.55-1.45 4.35-4.35 4.35-1.85 0-3.2-.55-4.05-1.35l1.7-2.55c.45.45 1.15.75 1.95.75 1.15 0 1.75-.85 1.75-2.2V5.4z"/>
-  <path fill="#8a3a36" d="M12.4 26.4 17.05 5.4h5.15L27.1 26.4h-4.35l-.85-4.05h-4.35l-.9 4.05h-4.25zm5.55-7.05h2.95l-1.45-6.85-1.5 6.85z"/>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="14" fill="#fbf7f2"/><g transform="translate(5.34 4.48) scale(0.86)"><path fill="#1e1e1e" d="M20.5 8H38L26 56H3L6.25 43H14.75L13.25 49H19.25L27.75 15H18.75Z"/><path fill="#9a4a32" fill-rule="evenodd" d="M37 8H47L59 56H50.5L47.5 44H36.5L33.5 56H25ZM42 22L45.75 37H38.25Z"/></g></svg>

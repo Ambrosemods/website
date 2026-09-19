@@ -1,0 +1,30 @@
+{{ define "main" }}
+<article class="about">
+  <header class="about-hero">
+    {{- with resources.Get "images/headshot.jpg" }}
+    {{- $img := .Resize "240x240 webp q82" }}
+    <img class="about-avatar" src="{{ $img.RelPermalink }}" width="120" height="120" alt="Portrait of {{ site.Params.author }}">
+    {{- end }}
+    <div>
+      <p class="home-kicker">About</p>
+      <h1>{{ .Params.heading | default .Title }}</h1>
+    </div>
+  </header>
+
+  <div class="about-body post-content md-content">
+    {{ .Content }}
+  </div>
+
+  {{- with site.Params.profiles }}
+  <footer class="about-links">
+    <h2>Elsewhere</h2>
+    <p class="home-links">
+      {{- range . }}
+      <a class="home-btn" href="{{ .url }}" rel="noopener me">{{ .name }}</a>
+      {{- end }}
+      <a class="home-btn" href="https://seamless.sg" rel="noopener">Seamless XR</a>
+    </p>
+  </footer>
+  {{- end }}
+</article>
+{{ end }}

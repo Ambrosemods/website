@@ -24,21 +24,22 @@ body:has(.home) .main {
 
 .home-hero {
   display: grid;
-  gap: 1.75rem;
-  padding: 0.35rem 0 0.5rem;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 18.5rem);
+  align-items: center;
+  gap: 2.75rem;
+  padding: 1.25rem 0 0.5rem;
 }
 
-.home-cover {
+.home-portrait {
   margin: 0;
 }
 
-.home-cover img {
+.home-portrait img {
   display: block;
   width: 100%;
   height: auto;
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 4 / 5;
   object-fit: cover;
-  object-position: 72% 38%;
   border-radius: 16px;
 }
 
@@ -48,6 +49,11 @@ body:has(.home) .main {
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--secondary);
+}
+
+/* Wrap between kicker items, never inside one */
+.home-kicker span {
+  white-space: nowrap;
 }
 
 .home-intro h1 {
@@ -104,6 +110,24 @@ body:has(.home) .main {
   opacity: 0.9;
 }
 
+.home-profiles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 1.1rem;
+  margin: 1.1rem 0 0;
+  font-size: 0.9rem;
+}
+
+.home-profiles a {
+  color: var(--secondary);
+  text-underline-offset: 0.16em;
+}
+
+.home-profiles a:hover {
+  color: var(--primary);
+  text-decoration: underline;
+}
+
 .home-section h2 {
   margin: 0 0 1.1rem;
   font-size: 0.78rem;
@@ -122,7 +146,7 @@ body:has(.home) .main {
   border-top: 1px solid var(--border);
 }
 
-.home-work li {
+.home-work > li {
   padding: 1.15rem 0 1.25rem;
   border-bottom: 1px solid var(--border);
 }
@@ -150,6 +174,36 @@ body:has(.home) .main {
   max-width: 40rem;
   color: var(--content);
   line-height: 1.5;
+}
+
+.home-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 2rem;
+  list-style: none;
+  margin: 1rem 0 0;
+  padding: 0;
+  font-size: 0.85rem;
+  color: var(--secondary);
+}
+
+.home-stats strong {
+  display: block;
+  font-family: var(--home-serif);
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 1.15;
+  color: var(--primary);
+}
+
+.home-work .home-work-more {
+  margin-top: 0.85rem;
+  font-size: 0.92rem;
+}
+
+.home-work-more a {
+  color: var(--accent);
+  text-underline-offset: 0.16em;
 }
 
 .home-posts {
@@ -193,7 +247,15 @@ body:has(.home) .main {
 }
 
 @media (max-width: 700px) {
-  .home-cover img {
+  .home-hero {
+    grid-template-columns: 1fr;
+    gap: 1.75rem;
+    padding-top: 0.5rem;
+  }
+
+  .home-portrait img {
+    aspect-ratio: 4 / 3;
+    object-position: 50% 28%;
     border-radius: 12px;
   }
 

@@ -34,22 +34,36 @@ params:
     - /images/cover.jpg
 
   assets:
-    favicon: "favicon.png"
+    favicon: "favicon.svg"
     favicon16x16: "favicon-16x16.png"
     favicon32x32: "favicon-32x32.png"
     apple_touch_icon: "apple-touch-icon.png"
-    safari_pinned_tab: "favicon.svg"
+    safari_pinned_tab: "safari-pinned-tab.svg"
 
   label:
-    icon: "images/logo.png"
-    iconHeight: 40
     text: "Jonathan Ambrose"
+    # JA mark, inlined so it follows the light/dark toggle (colours live in custom.css)
+    iconSVG: '<svg class="logo-mark" viewBox="2.5 7.5 57 49" width="35" height="30" aria-hidden="true" focusable="false"><path class="logo-j" d="M20.5 8H38L26 56H3L6.25 43H14.75L13.25 49H19.25L27.75 15H18.75Z"/><path class="logo-a" fill-rule="evenodd" d="M37 8H47L59 56H50.5L47.5 44H36.5L33.5 56H25ZM42 22L45.75 37H38.25Z"/></svg>'
 
   homepage:
     kicker: "Medtech founder · CTO · Soft robotics PhD"
     lede: >
       CTO and co-founder of [Seamless XR](https://seamless.sg).
       I build haptic and sensory systems so clinicians can measure what patients can feel — and so people can get that feeling back.
+
+  # Shown on the homepage hero and the About page
+  profiles:
+    - name: LinkedIn
+      url: "https://www.linkedin.com/in/jwa"
+    - name: Google Scholar
+      url: "https://scholar.google.com/citations?user=zNqUuZ8AAAAJ"
+    - name: GitHub
+      url: "https://github.com/Ambrosemods"
+    - name: ResearchGate
+      url: "https://www.researchgate.net/profile/Jonathan_Ambrose5"
+
+  footer:
+    text: "[LinkedIn](https://www.linkedin.com/in/jwa) · [Google Scholar](https://scholar.google.com/citations?user=zNqUuZ8AAAAJ) · [GitHub](https://github.com/Ambrosemods)"
 
   profileMode:
     enabled: false
@@ -72,10 +86,11 @@ menu:
       name: Research
       url: /research/
       weight: 15
-    - identifier: blog
-      name: Blog
-      url: /blog/
-      weight: 20
+    # Blog is hidden until it has 3+ posts; /blog/ stays live. To bring it back:
+    # - identifier: blog
+    #   name: Blog
+    #   url: /blog/
+    #   weight: 20
     - identifier: contact
       name: Contact
       url: /contact/

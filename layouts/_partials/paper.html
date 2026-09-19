@@ -14,7 +14,7 @@
     <p class="research-meta">
       <em>{{ .venue }}</em>
       {{- if $href }}
-      · <a href="{{ $href }}" rel="noopener">{{ with .url }}IEEE Xplore{{ else }}doi{{ end }}</a>
+      · <a href="{{ $href }}" rel="noopener">{{ with .url }}IEEE Xplore{{ else }}DOI{{ end }}</a>
       {{- end }}
     </p>
     {{- with .note }}

@@ -1,6 +1,8 @@
 ---
-title: "About — Jonathan Ambrose"
+title: "About"
+heading: "About me"
 url: "/about/"
+layout: about
 description: "Jonathan Ambrose is a medtech founder, soft robotics PhD, and CTO of Seamless XR — an AI-guided sensory diagnostics company for clinicians."
 ShowReadingTime: false
 hideSummary: true
@@ -16,10 +18,6 @@ Ajinkya Bhat and I met in that lab. Seamless XR started as XR haptics; in 2024 w
 
 ## Now
 
-Most days I'm shipping product in healthcare. This site is the quieter half: [research](/research/), notes in the [blog](/blog/), and how to [reach me](/contact/).
+Most days I'm shipping product in healthcare. This site is the quieter half: my [research](/research/), and how to [reach me](/contact/).
 
 Outside work I travel and tinker with hardware. That still informs how I think. It just isn't the main story here.
-
-**Research:** [publications and patents](/research/) · [ResearchGate](https://www.researchgate.net/profile/Jonathan_Ambrose5) · [Google Scholar](https://scholar.google.com/citations?user=zNqUuZ8AAAAJ)
-
-**Elsewhere:** [Contact](/contact/) · [LinkedIn](https://linkedin.com/in/jwa) · [GitHub](https://github.com/Ambrosemods/) · [Seamless XR](https://seamless.sg)
