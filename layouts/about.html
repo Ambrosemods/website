@@ -2,7 +2,7 @@
 <article class="about">
   <header class="about-hero">
     {{- with resources.Get "images/headshot.jpg" }}
-    {{- $img := .Resize "240x240 webp q82" }}
+    {{- $img := .Resize "240x240 q82" }}
     <img class="about-avatar" src="{{ $img.RelPermalink }}" width="120" height="120" alt="Portrait of {{ site.Params.author }}">
     {{- end }}
     <div>

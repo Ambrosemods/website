@@ -30,8 +30,9 @@
       {{- end }}
     </div>
     {{- with resources.Get "images/cover.jpg" }}
-    {{- $sm := .Fill "480x600 Right webp q80" }}
-    {{- $lg := .Fill "800x1000 Right webp q80" }}
+    {{- /* JPEG, not WebP: Cloudflare builds with standard Hugo, which can't encode WebP */}}
+    {{- $sm := .Fill "480x600 Right q80" }}
+    {{- $lg := .Fill "800x1000 Right q80" }}
     <figure class="home-portrait">
       <img src="{{ $lg.RelPermalink }}"
         srcset="{{ $sm.RelPermalink }} 480w, {{ $lg.RelPermalink }} 800w"
