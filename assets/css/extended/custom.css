@@ -9,6 +9,16 @@
    Page layout lives in home.css, research.css, about.css, contact.css.
    ------------------------------------------------------------------ */
 
+/* Satoshi Bold, self-hosted from Fontshare (free for personal and commercial use).
+   The only weight the site uses; headings fall back to the system font, then Arial. */
+@font-face {
+  font-family: "Satoshi";
+  src: url("/fonts/satoshi-bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   /* Layout */
   --gap: 28px;
