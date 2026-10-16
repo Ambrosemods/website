@@ -1,0 +1,12 @@
+{{- /* Sticky header: show a hairline only once the page has moved. */}}
+<script>
+  (function () {
+    var header = document.querySelector(".header");
+    if (!header) return;
+    var sync = function () {
+      header.classList.toggle("is-scrolled", window.scrollY > 4);
+    };
+    sync();
+    document.addEventListener("scroll", sync, { passive: true });
+  })();
+</script>

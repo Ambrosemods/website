@@ -31,7 +31,7 @@ params:
   DateFormat: "January 2, 2006"
 
   images:
-    - /images/cover.jpg
+    - /images/og.jpg
 
   assets:
     favicon: "favicon.svg"
@@ -68,14 +68,6 @@ params:
   profileMode:
     enabled: false
 
-  socialIcons:
-    - name: github
-      url: "https://github.com/Ambrosemods/"
-    - name: linkedin
-      url: "https://linkedin.com/in/jwa"
-    - name: rss
-      url: "/index.xml"
-
 menu:
   main:
     - identifier: about
@@ -100,4 +92,3 @@ outputs:
   home:
     - HTML
     - RSS
-    - JSON

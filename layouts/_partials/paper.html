@@ -6,9 +6,9 @@
   <span class="research-year">{{ .year }}</span>
   <div class="research-body">
     {{- if $href }}
-    <a class="research-title" href="{{ $href }}" rel="noopener">{{ .title }}</a>
+    <a class="research-title item-title" href="{{ $href }}" rel="noopener">{{ .title }}</a>
     {{- else }}
-    <span class="research-title">{{ .title }}</span>
+    <span class="research-title item-title">{{ .title }}</span>
     {{- end }}
     <p class="research-authors">{{ .authors }}</p>
     <p class="research-meta">

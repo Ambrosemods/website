@@ -1,18 +1,7 @@
-/* Custom homepage — personal brand, PaperMod elsewhere */
-
-:root {
-  --accent: #9a4a32;
-  --accent-soft: rgba(154, 74, 50, 0.12);
-  --home-serif: "Fraunces", "Iowan Old Style", "Palatino Linotype", Palatino, serif;
-}
-
-:root[data-theme="dark"] {
-  --accent: #e08a6a;
-  --accent-soft: rgba(224, 138, 106, 0.16);
-}
+/* Homepage layout. Tokens, type and buttons come from custom.css */
 
 body:has(.home) .main {
-  max-width: calc(880px + var(--gap) * 2);
+  max-width: calc(var(--wide-width) + var(--gap) * 2);
 }
 
 .home {
@@ -44,70 +33,12 @@ body:has(.home) .main {
 }
 
 .home-kicker {
-  margin: 0 0 0.4rem;
-  font-size: 0.78rem;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--secondary);
+  margin-bottom: 0.4rem;
 }
 
 /* Wrap between kicker items, never inside one */
 .home-kicker span {
   white-space: nowrap;
-}
-
-.home-intro h1 {
-  margin: 0 0 0.85rem;
-  font-family: var(--home-serif);
-  font-size: clamp(2.2rem, 5vw, 3.15rem);
-  font-weight: 500;
-  letter-spacing: -0.03em;
-  line-height: 1.1;
-}
-
-.home-lede {
-  margin: 0;
-  max-width: 38rem;
-  font-size: 1.12rem;
-  line-height: 1.55;
-  color: var(--content);
-}
-
-.home-lede a {
-  color: var(--accent);
-  text-underline-offset: 0.16em;
-}
-
-.home-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.6rem;
-  margin: 1.35rem 0 0;
-}
-
-.home-btn {
-  display: inline-flex;
-  align-items: center;
-  padding: 0.42rem 0.9rem;
-  border: 1px solid var(--border);
-  border-radius: 999px;
-  font-size: 0.92rem;
-  color: var(--primary);
-  background: transparent;
-}
-
-.home-btn:hover {
-  border-color: var(--secondary);
-}
-
-.home-btn-primary {
-  background: var(--primary);
-  border-color: var(--primary);
-  color: var(--theme);
-}
-
-.home-btn-primary:hover {
-  opacity: 0.9;
 }
 
 .home-profiles {
@@ -121,20 +52,16 @@ body:has(.home) .main {
 .home-profiles a {
   color: var(--secondary);
   text-underline-offset: 0.16em;
+  transition: color 0.15s ease;
 }
 
 .home-profiles a:hover {
-  color: var(--primary);
+  color: var(--accent);
   text-decoration: underline;
 }
 
 .home-section h2 {
-  margin: 0 0 1.1rem;
-  font-size: 0.78rem;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--secondary);
-  font-weight: 600;
+  margin-bottom: 1.1rem;
 }
 
 .home-work {
@@ -151,22 +78,24 @@ body:has(.home) .main {
   border-bottom: 1px solid var(--border);
 }
 
-.home-work-meta {
+.home-work .home-work-meta {
   margin: 0 0 0.25rem;
-  font-size: 0.78rem;
-  color: var(--accent);
+  font-size: var(--label-size);
   letter-spacing: 0.04em;
+  color: var(--secondary);
 }
 
 .home-work h3 {
   margin: 0 0 0.4rem;
-  font-family: var(--home-serif);
-  font-size: 1.35rem;
-  font-weight: 500;
 }
 
 .home-work h3 a {
   color: var(--primary);
+  transition: color 0.15s ease;
+}
+
+.home-work h3 a:hover {
+  color: var(--accent);
 }
 
 .home-work p {
@@ -189,19 +118,21 @@ body:has(.home) .main {
 
 .home-stats strong {
   display: block;
-  font-family: var(--home-serif);
-  font-size: 1.6rem;
-  font-weight: 500;
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: var(--display-weight);
   line-height: 1.15;
   color: var(--primary);
 }
 
 .home-work .home-work-more {
   margin-top: 0.85rem;
-  font-size: 0.92rem;
+  font-size: var(--meta-size);
 }
 
-.home-work-more a {
+.home-work-more a,
+.home-more a,
+.home-contact a {
   color: var(--accent);
   text-underline-offset: 0.16em;
 }
@@ -219,6 +150,11 @@ body:has(.home) .main {
   padding: 0.7rem 0;
   border-bottom: 1px solid var(--border);
   color: var(--primary);
+  transition: color 0.15s ease;
+}
+
+.home-posts li a:hover {
+  color: var(--accent);
 }
 
 .home-posts li:first-child a {
@@ -232,12 +168,6 @@ body:has(.home) .main {
 
 .home-more {
   margin: 0.9rem 0 0;
-}
-
-.home-more a,
-.home-contact a {
-  color: var(--accent);
-  text-underline-offset: 0.16em;
 }
 
 .home-contact p {

@@ -5,10 +5,7 @@
     {{- $img := .Resize "240x240 q82" }}
     <img class="about-avatar" src="{{ $img.RelPermalink }}" width="120" height="120" alt="Portrait of {{ site.Params.author }}">
     {{- end }}
-    <div>
-      <p class="home-kicker">About</p>
-      <h1>{{ .Params.heading | default .Title }}</h1>
-    </div>
+    <h1 class="page-title">{{ .Params.heading | default .Title }}</h1>
   </header>
 
   <div class="about-body post-content md-content">
@@ -17,12 +14,12 @@
 
   {{- with site.Params.profiles }}
   <footer class="about-links">
-    <h2>Elsewhere</h2>
-    <p class="home-links">
+    <h2 class="label">Elsewhere</h2>
+    <p class="actions">
       {{- range . }}
-      <a class="home-btn" href="{{ .url }}" rel="noopener me">{{ .name }}</a>
+      <a class="btn" href="{{ .url }}" rel="noopener me">{{ .name }}</a>
       {{- end }}
-      <a class="home-btn" href="https://seamless.sg" rel="noopener">Seamless XR</a>
+      <a class="btn" href="https://seamless.sg" rel="noopener">Seamless XR</a>
     </p>
   </footer>
   {{- end }}

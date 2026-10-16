@@ -1,0 +1,12 @@
+{{ define "main" }}
+<article class="page-narrow">
+  <h1 class="page-title">Page not found</h1>
+  <p class="lede">That link is broken, or the page has moved. These still work:</p>
+  <p class="actions">
+    <a class="btn btn-primary" href="{{ "/" | relURL }}">Home</a>
+    <a class="btn" href="{{ "/about/" | relURL }}">About</a>
+    <a class="btn" href="{{ "/research/" | relURL }}">Research</a>
+    <a class="btn" href="{{ "/contact/" | relURL }}">Contact</a>
+  </p>
+</article>
+{{ end }}

@@ -4,12 +4,12 @@
   <header class="home-hero">
     <div class="home-intro">
       {{- with site.Params.homepage.kicker }}
-      <p class="home-kicker">
+      <p class="label home-kicker">
         {{- range $i, $k := split . " · " }}{{ if $i }} · {{ end }}<span>{{ $k }}</span>{{ end -}}
       </p>
       {{- end }}
-      <h1>{{ site.Title }}</h1>
-      <p class="home-lede">
+      <h1 class="page-title">{{ site.Title }}</h1>
+      <p class="lede">
         {{- with site.Params.homepage.lede }}
         {{ . | markdownify }}
         {{- else }}
@@ -17,9 +17,9 @@
         I build haptic and sensory systems so clinicians can measure what patients can feel — and so people can get that feeling back.
         {{- end }}
       </p>
-      <p class="home-links">
-        <a class="home-btn home-btn-primary" href="{{ "/contact/" | relURL }}">Get in touch</a>
-        <a class="home-btn" href="{{ "/about/" | relURL }}">About me</a>
+      <p class="actions">
+        <a class="btn btn-primary" href="{{ "/contact/" | relURL }}">Get in touch</a>
+        <a class="btn" href="{{ "/about/" | relURL }}">About me</a>
       </p>
       {{- with site.Params.profiles }}
       <p class="home-profiles">
@@ -44,17 +44,17 @@
   </header>
 
   <section class="home-section" id="work">
-    <h2>Selected work</h2>
+    <h2 class="label">Selected work</h2>
     <ul class="home-work">
       <li>
         <p class="home-work-meta">Company</p>
-        <h3><a href="https://seamless.sg" rel="noopener">Seamless XR</a></h3>
+        <h3 class="item-title"><a href="https://seamless.sg" rel="noopener">Seamless XR</a></h3>
         <p>Co-founder and CTO. Artemis is an AI-guided sensory diagnostics platform for point-of-care assessment — objective testing, less paperwork, better follow-up after stroke, neuropathy, and nerve injury.</p>
-        <p class="home-work-more"><a href="https://seamless.sg" rel="noopener">Visit seamless.sg ↗</a></p>
+        <p class="home-work-more"><a href="https://seamless.sg" rel="noopener">Visit seamless.sg <span class="link-arrow link-arrow-diagonal">↗</span></a></p>
       </li>
       <li>
         <p class="home-work-meta">Research</p>
-        <h3><a href="{{ "/research/" | relURL }}">Soft actuators and haptics</a></h3>
+        <h3 class="item-title"><a href="{{ "/research/" | relURL }}">Soft actuators and haptics</a></h3>
         <p>PhD at NUS on multilayer pneumatic actuators and wearable systems. First-author papers in <em>Soft Robotics</em> and <em>Advanced Intelligent Systems</em>, plus patents on the same hardware family.</p>
         {{- $firstAuthor := 0 }}
         {{- range $r.papers }}{{ if hasPrefix .authors "Jonathan W. Ambrose" }}{{ $firstAuthor = add $firstAuthor 1 }}{{ end }}{{ end }}
@@ -63,7 +63,7 @@
           <li><strong>{{ $firstAuthor }}</strong> as first author</li>
           <li><strong>{{ len $r.patents }}</strong> patents</li>
         </ul>
-        <p class="home-work-more"><a href="{{ "/research/" | relURL }}">Publications and patents →</a></p>
+        <p class="home-work-more"><a href="{{ "/research/" | relURL }}">Publications and patents <span class="link-arrow">→</span></a></p>
       </li>
     </ul>
   </section>
@@ -72,7 +72,7 @@
   {{- $posts := where site.RegularPages "Section" "blog" }}
   {{- if ge (len $posts) 3 }}
   <section class="home-section" id="blog">
-    <h2>Blog</h2>
+    <h2 class="label">Blog</h2>
     <ul class="home-posts">
       {{- range first 4 $posts }}
       <li>
@@ -88,7 +88,7 @@
   {{- end }}
 
   <section class="home-section home-contact" id="contact">
-    <h2>Say hello</h2>
+    <h2 class="label">Say hello</h2>
     <p>
       For work, press, or collaboration, use the
       <a href="{{ "/contact/" | relURL }}">contact form</a>
