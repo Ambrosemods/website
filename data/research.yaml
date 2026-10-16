@@ -67,6 +67,13 @@ papers:
     role: co
     doi: 10.1002/advs.75613
 
+  - title: An Integrated Fabric-Pneumatic Soft Sensing System for Multi-Site Muscle Activity Decoding
+    authors: Qifeng Xun, Jonathan W. Ambrose, Quan Xiong, Chen-Hua Yeow
+    venue: Advanced Intelligent Systems
+    year: 2026
+    role: co
+    doi: 10.1002/aisy.70545
+
   - title: Single-Motor Ultraflexible Robotic (SMUFR) Humanoid Hand
     authors: Quan Xiong, Dannuo Li, Xuanyi Zhou, Wenci Xin, Chao Wang, Jonathan W. Ambrose, Chen-Hua Yeow
     venue: IEEE Transactions on Medical Robotics and Bionics
